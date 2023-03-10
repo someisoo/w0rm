@@ -20,13 +20,15 @@
 #
 # 5. client.run() is called to start the Discord bot using the provided Bot token.
 
+from discord.ext import commands
 import asyncio
 import random
 import discord
-from discord.ext import commands
+import os
 
-TOKEN = 'token shit here'
-client = commands.Bot(command_prefix='!')
+BOT_TOKEN = os.getenv('DISCORD_AUTH_KEY') # 
+intents = discord.Intents.all() # https://discordpy.readthedocs.io/en/latest/intents.html?highlight=intents
+client = commands.Bot(command_prefix='!', intents=intents)
 
 class Player:
     def __init__(self, member):
@@ -114,4 +116,4 @@ async def start_game(ctx):
     game = Game(ctx)
     await game.start()
 
-client.run(TOKEN)
+client.run(BOT_TOKEN)
