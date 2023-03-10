@@ -1,3 +1,25 @@
+# Sample Python code for a Discord bot that runs a simple 'Battle Royale' trivia game.
+#
+# Here's how it works::
+# 1. Imports the required libraries, including:
+#        - Discord.py - Discord Bot API Python wrapper.
+$        - asyncio - For handling asynchronous events.
+#
+# 2. There's a Player() class and a Game() class.
+#     - They are used to keep track of the players, questions, and scores.
+#
+# 3. The Game class has two methods: start() and play().
+#    - The start() method initializes the game and waits for the specified timeout (30s) before calling play().
+#    - The play() method runs a loop for a specified number of rounds, each round picking a random question and waiting for the players to answer. 
+#        - If a player answers correctly, their score is updated.
+#        - If a player answers incorrectly, they are eliminated from the game.
+#
+# 4. The code defines two Discord bot commands: start_game() and stop_game().
+#     - start_game() checks if the bot is connected to a voice channel and starts a new Game object to run the trivia game.
+#     - stop_game() is not defined / implemented yet.
+#
+# 5. client.run() is called to start the Discord bot using the provided Bot token.
+
 import asyncio
 import random
 import discord
