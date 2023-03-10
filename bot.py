@@ -3,7 +3,7 @@
 # Here's how it works::
 # 1. Imports the required libraries, including:
 #        - Discord.py - Discord Bot API Python wrapper.
-$        - asyncio - For handling asynchronous events.
+#        - asyncio - For handling asynchronous events.
 #
 # 2. There's a Player() class and a Game() class.
 #     - They are used to keep track of the players, questions, and scores.
